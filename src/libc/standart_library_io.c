@@ -161,10 +161,9 @@ void standart_library_io_fscanf_fprintf_string(char *path, char *path_to_new_fil
     }
 
     char buffer[bufsize];
-    while(fscanf(file_from, "%s",buffer) > 0){
+    while(fscanf(file_from, "%s",buffer) != EOF){
         fprintf(file_to, "%s",buffer);
     }
-    fflush(file_to);
 
     fclose(file_from);
     fclose(file_to);
