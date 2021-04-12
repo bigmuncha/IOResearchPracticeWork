@@ -149,7 +149,8 @@ void standart_library_io_fscanf_fprintf(char *path, char *path_to_new_file){
 }
 
 void standart_library_io_fscanf_fprintf_string(char *path, char *path_to_new_file, size_t bufsize){
-        FILE *file_from;
+
+    FILE *file_from;
     FILE *file_to;
 
 
