@@ -10,5 +10,6 @@ add_executable(main ${SOURCE_EXE})
 
 add_subdirectory(libc)
 #add_subdirectory(libcpp)
+add_subdirectory(tools)
 
-target_link_libraries(main unix_io standart_io)
+target_link_libraries(main unix_io standart_io tools)

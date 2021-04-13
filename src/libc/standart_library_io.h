@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdarg.h>
+#include <stdlib.h>
 
 /*read write only one char*/
 void standart_library_io_getc_putc(char *,char *);
@@ -18,11 +19,15 @@ void standart_library_io_binary_fgetc_fputc(char *, char *);
 void standart_library_io_fgets_fputs(char *, char *,size_t);
 
 /*binary io, cannot apply to txt files*/
-void standart_library_io_binary_fread_fwrite(char *,char *,int);
+void standart_library_io_binary_fread_fwrite(char *,char *,size_t);
 
 /*formating io read each char and write its*/
 void standart_library_io_fscanf_fprintf(char *, char*);
-/*same, but read string for specific lenght*/
-void standart_library_io_fscanf_fprintf_string(char *, char*,size_t);
+
+/*same, but read string
+ *dont work */
+
+//void standart_library_io_fscanf_fprintf_string(char *, char*);
+
 
 #endif // __STANDART_LIBRARY_IO_H_

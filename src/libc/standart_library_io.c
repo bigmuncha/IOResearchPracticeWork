@@ -1,5 +1,5 @@
 #include "standart_library_io.h"
-
+#include "../tools/tools.h"
 
 void standart_library_io_getc_putc(char *path,char *path_to_new_file){
     FILE *file_from;
@@ -21,7 +21,7 @@ void standart_library_io_getc_putc(char *path,char *path_to_new_file){
 }
 
 
-void standart_library_io_bunary_getc_putc(char *path,char *path_to_new_file){
+void standart_library_io_binary_getc_putc(char *path,char *path_to_new_file){
     FILE *file_from;
     FILE *file_to;
     int c;
@@ -101,12 +101,13 @@ void standart_library_io_fgets_fputs(char *path, char* path_to_new_file,
     fclose(file_to);
 }
 
-/*cannot work with txt files*/
-void standart_library_io_bynary_fread_fwrite(char *path, char* path_to_new_file,
+
+void standart_library_io_binary_fread_fwrite(char *path,
+                                             char* path_to_new_file,
                                              size_t bufsize){
     FILE *file_from;
     FILE *file_to;
-    char str[bufsize];
+    int str[bufsize];
     int count;
 
     if((file_from = fopen(path, "rb")) == NULL){
@@ -116,10 +117,14 @@ void standart_library_io_bynary_fread_fwrite(char *path, char* path_to_new_file,
         perror("Error with open output file");
     }
 
-    while((count = fread(str,bufsize,1,file_from)) > 0){
-        fwrite(str, count, 1, file_to);
-    }
+    int sum =0;
 
+    while((count = fread(str,1,bufsize,file_from)) > 0){
+        printf("count ");
+        sum++;
+        fwrite(str, 1, count, file_to);
+    }
+    printf("%d",sum);
     fclose(file_from);
     fclose(file_to);
 }
@@ -148,7 +153,10 @@ void standart_library_io_fscanf_fprintf(char *path, char *path_to_new_file){
     fclose(file_to);
 }
 
-void standart_library_io_fscanf_fprintf_string(char *path, char *path_to_new_file, size_t bufsize){
+
+/*dont work*/
+void standart_library_io_fscanf_fprintf_string(char *path,
+                                               char *path_to_new_file){
 
     FILE *file_from;
     FILE *file_to;
@@ -161,9 +169,11 @@ void standart_library_io_fscanf_fprintf_string(char *path, char *path_to_new_fil
         perror("Error with open output file");
     }
 
-    char buffer[bufsize];
-    while(fscanf(file_from, "%s",buffer) != EOF){
-        fprintf(file_to, "%s",buffer);
+    long size = get_file_size(path);
+
+    char *buffer = malloc(size);
+    while(fscanf(file_from, "%[^\n]",buffer) != EOF){
+        fprintf(file_to, "%s\n",buffer);
     }
 
     fclose(file_from);
