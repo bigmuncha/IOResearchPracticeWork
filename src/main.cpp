@@ -1,9 +1,18 @@
+#include "libcpp/stl_io.h"
+
+extern "C"{
+
+#include "tools/tools.h"
 #include "libc/universal_unix_io.h"
 #include "libc/standart_library_io.h"
-#include "tools/tools.h"
-int main(int argc, char **argv){
-    printf("%ld\n", get_file_size("CMakeCache.txt"));
 
+}
+
+int main(int argc, char **argv){
+    
+
+    printf("%ld\n", get_file_size((char *)"CMakeCache.txt"));
+/*
     universal_unix_io("CMakeCache.txt", "./new.c", 8192);
     universal_unix_io("video_50mb.mp4", "new_video.mp4", 8192);
 
@@ -20,5 +29,12 @@ int main(int argc, char **argv){
     standart_library_io_fscanf_fprintf("CMakeCache.txt", "./new4.c");
 
     //standart_library_io_fscanf_fprintf_string("CMakeCache.txt", "./new5.c");
+*/
+
+    FileIO::foo();
+    FileIO::io_by_rdbuf("CMakeCache.txt", "./new5.c");
+    FileIO::io_by_std_getline("CMakeCache.txt", "./new6.c");
+    FileIO::io_by_ifstream_readsome("CMakeCache.txt", "./new7.c",256);
+    cout <<"omer";
     return 0;
 }

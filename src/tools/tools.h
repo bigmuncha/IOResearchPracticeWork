@@ -5,6 +5,6 @@
 #include <unistd.h>
 #include <sys/stat.h>
 
-long get_file_size(char *);
+ long get_file_size(char *);
 
 #endif // __TOOLS_H_
