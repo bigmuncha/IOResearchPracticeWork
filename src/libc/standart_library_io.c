@@ -117,14 +117,10 @@ void standart_library_io_binary_fread_fwrite(char *path,
         perror("Error with open output file");
     }
 
-    int sum =0;
-
     while((count = fread(str,1,bufsize,file_from)) > 0){
-        printf("count ");
-        sum++;
         fwrite(str, 1, count, file_to);
     }
-    printf("%d",sum);
+
     fclose(file_from);
     fclose(file_to);
 }
