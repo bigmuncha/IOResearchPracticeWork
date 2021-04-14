@@ -1,5 +1,5 @@
 #include "standart_library_io.h"
-#include "../tools/tools.h"
+
 
 void standart_library_io_getc_putc(char *path,char *path_to_new_file){
     FILE *file_from;
@@ -102,6 +102,7 @@ void standart_library_io_fgets_fputs(char *path, char* path_to_new_file,
 }
 
 
+
 void standart_library_io_binary_fread_fwrite(char *path,
                                              char* path_to_new_file,
                                              size_t bufsize){
@@ -165,7 +166,12 @@ void standart_library_io_fscanf_fprintf_string(char *path,
         perror("Error with open output file");
     }
 
-    long size = get_file_size(path);
+    struct stat statbuf;
+    long size;
+    if(stat(path, &statbuf) == -1){
+            perror("Error in file size func");
+    }
+    size = statbuf.st_size;
 
     char *buffer = malloc(size);
     while(fscanf(file_from, "%[^\n]",buffer) != EOF){

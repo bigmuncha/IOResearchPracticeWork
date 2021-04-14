@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
-
+#include <sys/stat.h>
 /*read write only one char*/
 void standart_library_io_getc_putc(char *,char *);
 /*same, but for binary*/

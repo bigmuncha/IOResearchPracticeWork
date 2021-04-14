@@ -12,4 +12,4 @@ add_subdirectory(libc)
 add_subdirectory(libcpp)
 add_subdirectory(tools)
 
-target_link_libraries(main stl_io unix_io standart_io tools )
+target_link_libraries(main stl_io tools unix_io standart_io )
