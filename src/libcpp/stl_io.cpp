@@ -84,8 +84,8 @@ void CppFileIO::io_by_ifstream_read(string path,
 
     ifstream file_from;
     ofstream file_to;
-    file_from.open(path);
-    file_to.open(path_to_new_file);
+    file_from.open(path, ios::binary);
+    file_to.open(path_to_new_file, ios::binary);
 
     if(!file_from.is_open()){
        cerr << "Error in open input file";

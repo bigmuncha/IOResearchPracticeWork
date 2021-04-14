@@ -1,6 +1,7 @@
 #include "libcpp/stl_io.h"
 
 #include "tools/tools.h"
+
 extern "C"{
 
 #include "libc/universal_unix_io.h"
@@ -37,8 +38,6 @@ void time_wraper(Fn foo,std::string path,
     }else{
         std::cout <<" >>>>> >>>>> NOT ENOUGH <<<<< <<<<<\n";
     }
-
-
 }
 
 
@@ -147,8 +146,8 @@ int main(int argc, char **argv){
         std::cout <<endl <<endl;
 
     {
-        std::cout << "CPP stl io by rdbuf for "<<
-            file_map[vec_filename[0]]/(1024 * 1024.0) <<
+        std::cout << "CPP stl io binary by  rdbuf for "<<
+            file_map[vec_filename[1]]/(1024 * 1024.0) <<
             "mb bin\n";
         std::string file_from = vec_filename[1];
         std::string file_to =std::to_string(1) +  vec_new_filename[1];
@@ -168,6 +167,65 @@ int main(int argc, char **argv){
         time_wraper(omar, file_from, file_to);
     }
 
+    std::cout <<std::endl <<std::endl;
+
+    for(auto i: vec_bufsize){
+        std::cout << "CPP stl io by ifstream readsome for "<<
+            file_map[vec_filename[0]]/(1024 * 1024.0) <<
+            "mb txt. Bufsize = " << i<<'\n';
+        std::string file_from = vec_filename[0];
+        std::string file_to =std::to_string(i) +  vec_new_filename[0];
+        auto omar = bind(CppFileIO::io_by_ifstream_readsome,(char *) file_from.c_str(), (char *)file_to.c_str(), i);
+        time_wraper(omar, file_from, file_to);
+    }
+
+    std::cout <<endl <<endl;
+    for(auto i: vec_bufsize){
+        std::cout << "CPP stl io binary by ifstream readsome for "<<
+            file_map[vec_filename[1]]/(1024 * 1024.0) <<
+            "mb bin. Bufsize = " << i<<'\n';
+        std::string file_from = vec_filename[1];
+        std::string file_to =std::to_string(i) +  vec_new_filename[1];
+        auto omar = bind(CppFileIO::io_binary_by_ifstream_readsome,(char *) file_from.c_str(), (char *)file_to.c_str(), i);
+        time_wraper(omar, file_from, file_to);
+    }
+
+        std::cout <<endl <<endl;
+
+    {
+        std::cout << "CPP stl io binary by copy streambuf iterator for "<<
+            file_map[vec_filename[1]]/(1024 * 1024.0) <<
+            "mb bin\n";
+        std::string file_from = vec_filename[1];
+        std::string file_to =std::to_string(1) +  vec_new_filename[1];
+        auto omar = bind(CppFileIO::io_binary_by_copy_streambuf_iterator,(char *) file_from.c_str(), (char *)file_to.c_str());
+        time_wraper(omar, file_from, file_to);
+    }
+
+        std::cout <<endl <<endl;
+
+    {
+        std::cout << "CPP stl io by ifstream read for "<<
+            file_map[vec_filename[0]]/(1024 * 1024.0) <<
+            "mb txt\n";
+        std::string file_from = vec_filename[0];
+        std::string file_to =std::to_string(1) +  vec_new_filename[0];
+        auto omar = bind(CppFileIO::io_by_ifstream_read,(char *) file_from.c_str(), (char *)file_to.c_str());
+        time_wraper(omar, file_from, file_to);
+    }
+
+
+    std::cout <<endl <<endl;
+
+    {
+        std::cout << "CPP stl io by ifstream read for "<<
+            file_map[vec_filename[1]]/(1024 * 1024.0) <<
+            "mb bin\n";
+        std::string file_from = vec_filename[1];
+        std::string file_to =std::to_string(1) +  vec_new_filename[1];
+        auto omar = bind(CppFileIO::io_by_ifstream_read,(char *) file_from.c_str(), (char *)file_to.c_str());
+        time_wraper(omar, file_from, file_to);
+    }
 
 
 
