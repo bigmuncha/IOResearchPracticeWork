@@ -167,7 +167,7 @@ void standart_library_io_fscanf_fprintf_string(char *path,
     }
 
     struct stat statbuf;
-    long size;
+    long long size;
     if(stat(path, &statbuf) == -1){
             perror("Error in file size func");
     }

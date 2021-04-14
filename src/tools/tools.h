@@ -16,7 +16,7 @@ using namespace std;
 
     time_point get_current_time();
     const duration elapsed_time(time_point,time_point);
-    long get_file_size(char *);
+    long long get_file_size(char *);
 
     template<typename Fn>
     void time_wraper(Fn foo,std::string path,

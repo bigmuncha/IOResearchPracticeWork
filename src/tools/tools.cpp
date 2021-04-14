@@ -11,9 +11,9 @@
         return start;
     }
 
-    long  get_file_size(char *path){
+    long long  get_file_size(char *path){
         struct stat statbuf;
-        long result;
+        long long result;
         if(stat(path, &statbuf) == -1){
             perror("Error in file size func");
         }
@@ -25,14 +25,14 @@
     void time_wraper(Fn foo,std::string path,
                      std::string path_to_new_file){
 
-        long f1 = get_file_size((char *)path.c_str());
+        long long f1 = get_file_size((char *)path.c_str());
         time_point start = get_current_time();
 
         foo();
 
         time_point finish = get_current_time();
         duration result = elapsed_time(finish, start);
-        long f2 = get_file_size((char *)path.c_str());
+        long long f2 = get_file_size((char *)path.c_str());
 
         std::cout << "Elapsed time " << result.count() << " sec" <<'\n'
                   <<"New file size status: ";

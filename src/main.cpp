@@ -8,34 +8,34 @@ extern "C"{
 }
 
 #include <functional>
-
+#include <map>
 #include <vector>
-
+#include <iomanip>
 
 template<typename Fn>
 void time_wraper(Fn foo,std::string path,
                  std::string path_to_new_file){
 
-    long f1 = get_file_size((char *)path.c_str());
+    long long f1 = get_file_size((char *)path.c_str());
     time_point start = get_current_time();
 
     foo();
 
     time_point finish = get_current_time();
     duration result = elapsed_time(finish, start);
-    long f2 = get_file_size((char *)path.c_str());
-
-    std::cout << "Elapsed time " << result.count() << " sec" <<'\n'
-              <<"New file size status: ";
+    long long f2 = get_file_size((char *)path.c_str());
+    string whitespace = "           ";
+    std::cout <<whitespace << "Elapsed time " << result.count() << " sec" <<'\n'
+              <<whitespace<<"New file size status: ";
 
     if(f1 == f2){
         std::cout <<"NORMAL\n"
-                  <<"Read/Write speed: " << f1 /result.count() << '\n';
+                  << whitespace<<"Read/Write average speed: " << f1 /result.count() << '\n';
 
     }else if (f1 > f2){
-        std::cout <<"OVERFLOW\n";
+        std::cout <<" >>>>> >>>>> OVERFLOW <<<<< <<<<<\n";
     }else{
-        std::cout <<"NOT ENOUGH\n";
+        std::cout <<" >>>>> >>>>> NOT ENOUGH <<<<< <<<<<\n";
     }
 
 
@@ -45,33 +45,132 @@ void time_wraper(Fn foo,std::string path,
 int main(int argc, char **argv){
 
     std::vector<int> vec_bufsize = {64, 128, 256 , 512, 1024, 4096, 8192,16384, 32768,65536};
-    printf("%ld\n",get_file_size((char *)"CMakeCache.txt"));
-    auto omar =
-        bind(universal_unix_io,
-             (char *)"CMakeCache.txt",(char *) "./new.c",
-             256);
+    std::vector<std::string> vec_filename = {"CMakeCache.txt", "video_50mb.mp4"};
+    std::vector<std::string> vec_new_filename = {"new.txt", "new_video.mp4"};
+    //printf("%ld\n",get_file_size((char *)"CMakeCache.txt"));
+    std::map<std::string, long long> file_map;
+    for(auto i : vec_filename){
+        file_map[i] = get_file_size((char *) i.c_str());
+    }
 
-    time_wraper(omar, "CMakeCache.txt", "make");
+    for(auto i: vec_bufsize){
+        std::cout << "Universal unix io for "<<
+            file_map[vec_filename[0]]/(1024 * 1024.0) <<
+            "mb txt. Bufsize = " << i<<'\n';
+        std::string file_from = vec_filename[0];
+        std::string file_to =std::to_string(i) +  vec_new_filename[0];
+        auto omar = bind(universal_unix_io,(char *) file_from.c_str(), (char *)file_to.c_str(), i);
+        time_wraper(omar, file_from, file_to);
+    }
+    std::cout <<endl <<endl;
 
-    /*
-    universal_unix_io((char *)"video_50mb.mp4",(char *) "new_video.mp4", 256);
-    cout << "complete\n";
-    standart_library_io_getc_putc((char *)"CMakeCache.txt",(char *) "./new1.c");
-    standart_library_io_binary_getc_putc((char *)"video_50mb.mp4",(char *) "new_video1.mp4");
-    cout << "complete\n";
-    standart_library_io_fgetc_fputc((char *)"CMakeCache.txt",(char *) "./new2.c");
-    standart_library_io_binary_fgetc_fputc((char *)"video_50mb.mp4", (char *)"new_video2.mp4");
-    cout << "complete\n";
-    standart_library_io_binary_fread_fwrite((char *)"video_50mb.mp4", (char *)"new_video3.mp4", 256);
-    cout << "complete\n";
-    standart_library_io_fgets_fputs((char *)"CMakeCache.txt", (char *)"./new3.c", 256);
+    for(auto i: vec_bufsize){
+        std::cout << "Universal unix io for " <<
+            file_map[vec_filename[1]]/(1024 * 1024.0) <<
+            "mb bin. Bufsize = " << i<<'\n';
+        std::string file_from = vec_filename[1];
+        std::string file_to =std::to_string(i) +  vec_new_filename[1];
+        auto omar = bind(universal_unix_io,(char *) file_from.c_str(), (char *)file_to.c_str(), i);
+        time_wraper(omar, file_from, file_to);
+    }
+    std::cout <<endl <<endl;
 
-//    standart_library_io_binary_fgets_fputs((char *)"video_50mb.mp4", (char *)"new_video4.mp4", 256);
+    {
+        std::cout << "C lang standart library io getc putc for "<<
+            file_map[vec_filename[0]]/(1024 * 1024.0) <<
+            "mb txt.\n";
+        std::string file_from = vec_filename[0];
+        std::string file_to =std::to_string(1) +  vec_new_filename[0];
+        auto omar = bind(standart_library_io_binary_getc_putc,(char *) file_from.c_str(), (char *)file_to.c_str());
+        time_wraper(omar, file_from, file_to);
 
-    cout << "complete\n";
-    standart_library_io_fscanf_fprintf((char *)"CMakeCache.txt",(char *) "./new4.c");
-    cout << "complete\n";
-*/
+    }
+    std::cout <<endl;
+
+    {
+        std::cout << "C lang standart library io getc putc for "<<
+            file_map[vec_filename[1]]/(1024 * 1024.0) <<
+            "mb bin.\n";
+        std::string file_from = vec_filename[1];
+        std::string file_to =std::to_string(1) +  vec_new_filename[1];
+        auto omar = bind(standart_library_io_binary_getc_putc,(char *) file_from.c_str(), (char *)file_to.c_str());
+        time_wraper(omar, file_from, file_to);
+    }
+
+    std::cout <<endl <<endl;
+
+    for(auto i: vec_bufsize){
+        std::cout << "C lang standart library io fread fwrite for " <<
+            file_map[vec_filename[1]]/(1024 * 1024.0) <<
+            "mb bin. Bufsize = " << i<<'\n';
+        std::string file_from = vec_filename[1];
+        std::string file_to =std::to_string(i) +  vec_new_filename[1];
+        auto omar = bind(standart_library_io_binary_fread_fwrite,(char *) file_from.c_str(), (char *)file_to.c_str(), i);
+        time_wraper(omar, file_from, file_to);
+    }
+    std::cout <<endl <<endl;
+
+    for(auto i: vec_bufsize){
+        std::cout << "C lang standart library fgets fputs io for "<<
+            file_map[vec_filename[0]]/(1024 * 1024.0) <<
+            "mb txt. Bufsize = " << i<<'\n';
+        std::string file_from = vec_filename[0];
+        std::string file_to =std::to_string(i) +  vec_new_filename[0];
+        auto omar = bind(standart_library_io_fgets_fputs,(char *) file_from.c_str(), (char *)file_to.c_str(), i);
+        time_wraper(omar, file_from, file_to);
+    }
+
+    std::cout <<endl <<endl;
+
+    {
+        std::cout << "C lang standart library fscanf fprintf io for "<<
+            file_map[vec_filename[0]]/(1024 * 1024.0) <<
+            "mb txt\n";
+        std::string file_from = vec_filename[0];
+        std::string file_to =std::to_string(1) +  vec_new_filename[0];
+        auto omar = bind(standart_library_io_fscanf_fprintf,(char *) file_from.c_str(), (char *)file_to.c_str());
+        time_wraper(omar, file_from, file_to);
+    }
+
+    std::cout <<endl <<endl;
+
+    {
+        std::cout << "CPP stl io by rdbuf for "<<
+            file_map[vec_filename[0]]/(1024 * 1024.0) <<
+            "mb txt\n";
+        std::string file_from = vec_filename[0];
+        std::string file_to =std::to_string(1) +  vec_new_filename[0];
+        auto omar = bind(CppFileIO::io_by_rdbuf,(char *) file_from.c_str(), (char *)file_to.c_str());
+        time_wraper(omar, file_from, file_to);
+    }
+
+        std::cout <<endl <<endl;
+
+    {
+        std::cout << "CPP stl io by rdbuf for "<<
+            file_map[vec_filename[0]]/(1024 * 1024.0) <<
+            "mb bin\n";
+        std::string file_from = vec_filename[1];
+        std::string file_to =std::to_string(1) +  vec_new_filename[1];
+        auto omar = bind(CppFileIO::io_binary_by_rdbuf,(char *) file_from.c_str(), (char *)file_to.c_str());
+        time_wraper(omar, file_from, file_to);
+    }
+
+        std::cout <<endl <<endl;
+
+    {
+        std::cout << "CPP stl io by std getline for "<<
+            file_map[vec_filename[0]]/(1024 * 1024.0) <<
+            "mb txt\n";
+        std::string file_from = vec_filename[0];
+        std::string file_to =std::to_string(1) +  vec_new_filename[0];
+        auto omar = bind(CppFileIO::io_by_std_getline,(char *) file_from.c_str(), (char *)file_to.c_str());
+        time_wraper(omar, file_from, file_to);
+    }
+
+
+
+
 /*
     CppFileIO::io_by_rdbuf("CMakeCache.txt", "./new5.c");
     CppFileIO::io_by_std_getline("CMakeCache.txt", "./new6.c");

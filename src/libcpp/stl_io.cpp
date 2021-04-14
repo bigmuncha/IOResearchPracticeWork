@@ -97,7 +97,7 @@ void CppFileIO::io_by_ifstream_read(string path,
     }
 
     file_from.seekg(0,file_from.end);
-    long len = file_from.tellg();
+    long long len = file_from.tellg();
     file_from.seekg(0,file_from.beg);
 
     char * buffer = new char[len];

@@ -11,7 +11,7 @@ using namespace std;
 class CppFileIO{
     public:
 
-        static long get_size_file(ifstream);
+        static long long get_size_file(ifstream);
 
         static void io_by_rdbuf(string,string);
         static void io_binary_by_rdbuf(string,string);
