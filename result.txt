@@ -1,0 +1,606 @@
+Universal unix io for 512mb txt. Bufsize = 64
+           Elapsed time 25.7725 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.08312e+07
+Universal unix io for 512mb txt. Bufsize = 128
+           Elapsed time 13.1358 sec
+           New file size status: NORMAL
+           Read/Write average speed: 4.08708e+07
+Universal unix io for 512mb txt. Bufsize = 256
+           Elapsed time 6.67105 sec
+           New file size status: NORMAL
+           Read/Write average speed: 8.04777e+07
+Universal unix io for 512mb txt. Bufsize = 512
+           Elapsed time 3.61689 sec
+           New file size status: NORMAL
+           Read/Write average speed: 1.48434e+08
+Universal unix io for 512mb txt. Bufsize = 1024
+           Elapsed time 2.19935 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.44105e+08
+Universal unix io for 512mb txt. Bufsize = 4096
+           Elapsed time 0.849756 sec
+           New file size status: NORMAL
+           Read/Write average speed: 6.31794e+08
+Universal unix io for 512mb txt. Bufsize = 8192
+           Elapsed time 0.64232 sec
+           New file size status: NORMAL
+           Read/Write average speed: 8.35831e+08
+Universal unix io for 512mb txt. Bufsize = 16384
+           Elapsed time 0.559273 sec
+           New file size status: NORMAL
+           Read/Write average speed: 9.59945e+08
+Universal unix io for 512mb txt. Bufsize = 32768
+           Elapsed time 0.610451 sec
+           New file size status: NORMAL
+           Read/Write average speed: 8.79465e+08
+Universal unix io for 512mb txt. Bufsize = 65536
+           Elapsed time 0.506295 sec
+           New file size status: NORMAL
+           Read/Write average speed: 1.06039e+09
+
+
+Universal unix io for 512mb bin. Bufsize = 64
+           Elapsed time 33.5064 sec
+           New file size status: NORMAL
+           Read/Write average speed: 1.60229e+07
+Universal unix io for 512mb bin. Bufsize = 128
+           Elapsed time 13.3236 sec
+           New file size status: NORMAL
+           Read/Write average speed: 4.02946e+07
+Universal unix io for 512mb bin. Bufsize = 256
+           Elapsed time 6.91975 sec
+           New file size status: NORMAL
+           Read/Write average speed: 7.75853e+07
+Universal unix io for 512mb bin. Bufsize = 512
+           Elapsed time 3.58746 sec
+           New file size status: NORMAL
+           Read/Write average speed: 1.49652e+08
+Universal unix io for 512mb bin. Bufsize = 1024
+           Elapsed time 1.98412 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.70584e+08
+Universal unix io for 512mb bin. Bufsize = 4096
+           Elapsed time 0.776575 sec
+           New file size status: NORMAL
+           Read/Write average speed: 6.91332e+08
+Universal unix io for 512mb bin. Bufsize = 8192
+           Elapsed time 0.630156 sec
+           New file size status: NORMAL
+           Read/Write average speed: 8.51965e+08
+Universal unix io for 512mb bin. Bufsize = 16384
+           Elapsed time 0.5619 sec
+           New file size status: NORMAL
+           Read/Write average speed: 9.55456e+08
+Universal unix io for 512mb bin. Bufsize = 32768
+           Elapsed time 0.50029 sec
+           New file size status: NORMAL
+           Read/Write average speed: 1.07312e+09
+Universal unix io for 512mb bin. Bufsize = 65536
+           Elapsed time 0.52287 sec
+           New file size status: NORMAL
+           Read/Write average speed: 1.02678e+09
+
+
+C lang standart library io getc putc for 512mb txt.
+           Elapsed time 5.63132 sec
+           New file size status: NORMAL
+           Read/Write average speed: 9.53365e+07
+
+C lang standart library io getc putc for 512mb bin.
+           Elapsed time 5.85439 sec
+           New file size status: NORMAL
+           Read/Write average speed: 9.1704e+07
+
+
+C lang standart library io fread fwrite for 512mb bin. Bufsize = 64
+           Elapsed time 1.16166 sec
+           New file size status: NORMAL
+           Read/Write average speed: 4.6216e+08
+C lang standart library io fread fwrite for 512mb bin. Bufsize = 128
+           Elapsed time 0.99387 sec
+           New file size status: NORMAL
+           Read/Write average speed: 5.40182e+08
+C lang standart library io fread fwrite for 512mb bin. Bufsize = 256
+           Elapsed time 1.05753 sec
+           New file size status: NORMAL
+           Read/Write average speed: 5.07663e+08
+C lang standart library io fread fwrite for 512mb bin. Bufsize = 512
+           Elapsed time 0.9428 sec
+           New file size status: NORMAL
+           Read/Write average speed: 5.69443e+08
+C lang standart library io fread fwrite for 512mb bin. Bufsize = 1024
+           Elapsed time 0.882973 sec
+           New file size status: NORMAL
+           Read/Write average speed: 6.08026e+08
+C lang standart library io fread fwrite for 512mb bin. Bufsize = 4096
+           Elapsed time 0.81469 sec
+           New file size status: NORMAL
+           Read/Write average speed: 6.58988e+08
+C lang standart library io fread fwrite for 512mb bin. Bufsize = 8192
+           Elapsed time 0.777194 sec
+           New file size status: NORMAL
+           Read/Write average speed: 6.90781e+08
+C lang standart library io fread fwrite for 512mb bin. Bufsize = 16384
+           Elapsed time 0.625092 sec
+           New file size status: NORMAL
+           Read/Write average speed: 8.58867e+08
+C lang standart library io fread fwrite for 512mb bin. Bufsize = 32768
+           Elapsed time 0.544095 sec
+           New file size status: NORMAL
+           Read/Write average speed: 9.86723e+08
+C lang standart library io fread fwrite for 512mb bin. Bufsize = 65536
+           Elapsed time 0.508864 sec
+           New file size status: NORMAL
+           Read/Write average speed: 1.05504e+09
+
+
+C lang standart library fgets fputs io for 512mb txt. Bufsize = 64
+           Elapsed time 1.24038 sec
+           New file size status: NORMAL
+           Read/Write average speed: 4.32829e+08
+C lang standart library fgets fputs io for 512mb txt. Bufsize = 128
+           Elapsed time 1.37826 sec
+           New file size status: NORMAL
+           Read/Write average speed: 3.89527e+08
+C lang standart library fgets fputs io for 512mb txt. Bufsize = 256
+           Elapsed time 1.00064 sec
+           New file size status: NORMAL
+           Read/Write average speed: 5.36528e+08
+C lang standart library fgets fputs io for 512mb txt. Bufsize = 512
+           Elapsed time 1.08506 sec
+           New file size status: NORMAL
+           Read/Write average speed: 4.94785e+08
+C lang standart library fgets fputs io for 512mb txt. Bufsize = 1024
+           Elapsed time 0.946223 sec
+           New file size status: NORMAL
+           Read/Write average speed: 5.67383e+08
+C lang standart library fgets fputs io for 512mb txt. Bufsize = 4096
+           Elapsed time 1.18431 sec
+           New file size status: NORMAL
+           Read/Write average speed: 4.53321e+08
+C lang standart library fgets fputs io for 512mb txt. Bufsize = 8192
+           Elapsed time 0.894171 sec
+           New file size status: NORMAL
+           Read/Write average speed: 6.00412e+08
+C lang standart library fgets fputs io for 512mb txt. Bufsize = 16384
+           Elapsed time 0.772488 sec
+           New file size status: NORMAL
+           Read/Write average speed: 6.94989e+08
+C lang standart library fgets fputs io for 512mb txt. Bufsize = 32768
+           Elapsed time 0.696286 sec
+           New file size status: NORMAL
+           Read/Write average speed: 7.7105e+08
+C lang standart library fgets fputs io for 512mb txt. Bufsize = 65536
+           Elapsed time 0.657069 sec
+           New file size status: NORMAL
+           Read/Write average speed: 8.17069e+08
+
+
+C lang standart library fscanf fprintf io for 512mb txt
+           Elapsed time 22.3751 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.39942e+07
+
+
+CPP stl io by rdbuf for 512mb txt
+           Elapsed time 0.742556 sec
+           New file size status: NORMAL
+           Read/Write average speed: 7.23004e+08
+
+
+CPP stl io binary by  rdbuf for 512mb bin
+           Elapsed time 0.753297 sec
+           New file size status: NORMAL
+           Read/Write average speed: 7.12695e+08
+
+
+CPP stl io by std getline for 512mb txt
+           Elapsed time 1.70716 sec
+           New file size status: NORMAL
+           Read/Write average speed: 3.14481e+08
+
+
+CPP stl io by ifstream readsome for 512mb txt. Bufsize = 64
+           Elapsed time 1.21815 sec
+           New file size status: NORMAL
+           Read/Write average speed: 4.40728e+08
+CPP stl io by ifstream readsome for 512mb txt. Bufsize = 128
+           Elapsed time 1.03583 sec
+           New file size status: NORMAL
+           Read/Write average speed: 5.18302e+08
+CPP stl io by ifstream readsome for 512mb txt. Bufsize = 256
+           Elapsed time 0.954273 sec
+           New file size status: NORMAL
+           Read/Write average speed: 5.62597e+08
+CPP stl io by ifstream readsome for 512mb txt. Bufsize = 512
+           Elapsed time 0.885492 sec
+           New file size status: NORMAL
+           Read/Write average speed: 6.06297e+08
+CPP stl io by ifstream readsome for 512mb txt. Bufsize = 1024
+           Elapsed time 1.88102 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.85414e+08
+CPP stl io by ifstream readsome for 512mb txt. Bufsize = 4096
+           Elapsed time 1.04201 sec
+           New file size status: NORMAL
+           Read/Write average speed: 5.15225e+08
+CPP stl io by ifstream readsome for 512mb txt. Bufsize = 8192
+           Elapsed time 0.706547 sec
+           New file size status: NORMAL
+           Read/Write average speed: 7.59851e+08
+CPP stl io by ifstream readsome for 512mb txt. Bufsize = 16384
+           Elapsed time 0.595488 sec
+           New file size status: NORMAL
+           Read/Write average speed: 9.01564e+08
+CPP stl io by ifstream readsome for 512mb txt. Bufsize = 32768
+           Elapsed time 0.529222 sec
+           New file size status: NORMAL
+           Read/Write average speed: 1.01445e+09
+CPP stl io by ifstream readsome for 512mb txt. Bufsize = 65536
+           Elapsed time 0.498944 sec
+           New file size status: NORMAL
+           Read/Write average speed: 1.07601e+09
+
+
+CPP stl io binary by ifstream readsome for 512mb bin. Bufsize = 64
+           Elapsed time 1.26046 sec
+           New file size status: NORMAL
+           Read/Write average speed: 4.25934e+08
+CPP stl io binary by ifstream readsome for 512mb bin. Bufsize = 128
+           Elapsed time 1.01834 sec
+           New file size status: NORMAL
+           Read/Write average speed: 5.27203e+08
+CPP stl io binary by ifstream readsome for 512mb bin. Bufsize = 256
+           Elapsed time 0.943629 sec
+           New file size status: NORMAL
+           Read/Write average speed: 5.68943e+08
+CPP stl io binary by ifstream readsome for 512mb bin. Bufsize = 512
+           Elapsed time 0.955759 sec
+           New file size status: NORMAL
+           Read/Write average speed: 5.61722e+08
+CPP stl io binary by ifstream readsome for 512mb bin. Bufsize = 1024
+           Elapsed time 1.88961 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.84117e+08
+CPP stl io binary by ifstream readsome for 512mb bin. Bufsize = 4096
+           Elapsed time 1.06762 sec
+           New file size status: NORMAL
+           Read/Write average speed: 5.02868e+08
+CPP stl io binary by ifstream readsome for 512mb bin. Bufsize = 8192
+           Elapsed time 0.710624 sec
+           New file size status: NORMAL
+           Read/Write average speed: 7.55493e+08
+CPP stl io binary by ifstream readsome for 512mb bin. Bufsize = 16384
+           Elapsed time 0.688747 sec
+           New file size status: NORMAL
+           Read/Write average speed: 7.7949e+08
+CPP stl io binary by ifstream readsome for 512mb bin. Bufsize = 32768
+           Elapsed time 0.528959 sec
+           New file size status: NORMAL
+           Read/Write average speed: 1.01496e+09
+CPP stl io binary by ifstream readsome for 512mb bin. Bufsize = 65536
+           Elapsed time 0.498024 sec
+           New file size status: NORMAL
+           Read/Write average speed: 1.078e+09
+
+
+CPP stl io binary by copy streambuf iterator for 512mb bin
+           Elapsed time 0.750334 sec
+           New file size status: NORMAL
+           Read/Write average speed: 7.15509e+08
+
+
+CPP stl io by ifstream read for 512mb txt
+           Elapsed time 0.723178 sec
+           New file size status: NORMAL
+           Read/Write average speed: 7.42377e+08
+
+
+CPP stl io by ifstream read for 512mb bin
+           Elapsed time 1.0278 sec
+           New file size status: NORMAL
+           Read/Write average speed: 5.22348e+08
+Universal unix io for 1024mb txt. Bufsize = 64
+           Elapsed time 73.5593 sec
+           New file size status: NORMAL
+           Read/Write average speed: 1.4597e+07
+Universal unix io for 1024mb txt. Bufsize = 128
+           Elapsed time 26.7631 sec
+           New file size status: NORMAL
+           Read/Write average speed: 4.01202e+07
+Universal unix io for 1024mb txt. Bufsize = 256
+           Elapsed time 13.3856 sec
+           New file size status: NORMAL
+           Read/Write average speed: 8.0216e+07
+Universal unix io for 1024mb txt. Bufsize = 512
+           Elapsed time 7.41679 sec
+           New file size status: NORMAL
+           Read/Write average speed: 1.44772e+08
+Universal unix io for 1024mb txt. Bufsize = 1024
+           Elapsed time 5.496 sec
+           New file size status: NORMAL
+           Read/Write average speed: 1.95368e+08
+Universal unix io for 1024mb txt. Bufsize = 4096
+           Elapsed time 4.06306 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.64269e+08
+Universal unix io for 1024mb txt. Bufsize = 8192
+           Elapsed time 4.08788 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.62665e+08
+Universal unix io for 1024mb txt. Bufsize = 16384
+           Elapsed time 3.82484 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.80729e+08
+Universal unix io for 1024mb txt. Bufsize = 32768
+           Elapsed time 3.73898 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.87175e+08
+Universal unix io for 1024mb txt. Bufsize = 65536
+           Elapsed time 3.59885 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.98357e+08
+
+
+Universal unix io for 1024mb bin. Bufsize = 64
+           Elapsed time 71.3309 sec
+           New file size status: NORMAL
+           Read/Write average speed: 1.5053e+07
+Universal unix io for 1024mb bin. Bufsize = 128
+           Elapsed time 46.0148 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.33347e+07
+Universal unix io for 1024mb bin. Bufsize = 256
+           Elapsed time 13.9243 sec
+           New file size status: NORMAL
+           Read/Write average speed: 7.71126e+07
+Universal unix io for 1024mb bin. Bufsize = 512
+           Elapsed time 7.44666 sec
+           New file size status: NORMAL
+           Read/Write average speed: 1.44191e+08
+Universal unix io for 1024mb bin. Bufsize = 1024
+           Elapsed time 4.9696 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.16062e+08
+Universal unix io for 1024mb bin. Bufsize = 4096
+           Elapsed time 3.77928 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.84113e+08
+Universal unix io for 1024mb bin. Bufsize = 8192
+           Elapsed time 3.64663 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.94447e+08
+Universal unix io for 1024mb bin. Bufsize = 16384
+           Elapsed time 3.5855 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.99468e+08
+Universal unix io for 1024mb bin. Bufsize = 32768
+           Elapsed time 3.50828 sec
+           New file size status: NORMAL
+           Read/Write average speed: 3.06059e+08
+Universal unix io for 1024mb bin. Bufsize = 65536
+           Elapsed time 3.56525 sec
+           New file size status: NORMAL
+           Read/Write average speed: 3.01169e+08
+
+
+C lang standart library io getc putc for 1024mb txt.
+           Elapsed time 30.3204 sec
+           New file size status: NORMAL
+           Read/Write average speed: 3.54132e+07
+
+C lang standart library io getc putc for 1024mb bin.
+           Elapsed time 13.6623 sec
+           New file size status: NORMAL
+           Read/Write average speed: 7.85918e+07
+
+
+C lang standart library io fread fwrite for 1024mb bin. Bufsize = 64
+           Elapsed time 3.89601 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.756e+08
+C lang standart library io fread fwrite for 1024mb bin. Bufsize = 128
+           Elapsed time 4.02151 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.67e+08
+C lang standart library io fread fwrite for 1024mb bin. Bufsize = 256
+           Elapsed time 3.76836 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.84936e+08
+C lang standart library io fread fwrite for 1024mb bin. Bufsize = 512
+           Elapsed time 3.67037 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.92543e+08
+C lang standart library io fread fwrite for 1024mb bin. Bufsize = 1024
+           Elapsed time 3.76153 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.85453e+08
+C lang standart library io fread fwrite for 1024mb bin. Bufsize = 4096
+           Elapsed time 3.71494 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.89033e+08
+C lang standart library io fread fwrite for 1024mb bin. Bufsize = 8192
+           Elapsed time 3.51567 sec
+           New file size status: NORMAL
+           Read/Write average speed: 3.05416e+08
+C lang standart library io fread fwrite for 1024mb bin. Bufsize = 16384
+           Elapsed time 3.63167 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.95661e+08
+C lang standart library io fread fwrite for 1024mb bin. Bufsize = 32768
+           Elapsed time 3.40411 sec
+           New file size status: NORMAL
+           Read/Write average speed: 3.15425e+08
+C lang standart library io fread fwrite for 1024mb bin. Bufsize = 65536
+           Elapsed time 3.44999 sec
+           New file size status: NORMAL
+           Read/Write average speed: 3.1123e+08
+
+
+C lang standart library fgets fputs io for 1024mb txt. Bufsize = 64
+           Elapsed time 43.1276 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.48968e+07
+C lang standart library fgets fputs io for 1024mb txt. Bufsize = 128
+           Elapsed time 31.6511 sec
+           New file size status: NORMAL
+           Read/Write average speed: 3.39243e+07
+C lang standart library fgets fputs io for 1024mb txt. Bufsize = 256
+           Elapsed time 3.92854 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.73318e+08
+C lang standart library fgets fputs io for 1024mb txt. Bufsize = 512
+           Elapsed time 3.63981 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.94999e+08
+C lang standart library fgets fputs io for 1024mb txt. Bufsize = 1024
+           Elapsed time 3.61231 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.97245e+08
+C lang standart library fgets fputs io for 1024mb txt. Bufsize = 4096
+           Elapsed time 3.78879 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.834e+08
+C lang standart library fgets fputs io for 1024mb txt. Bufsize = 8192
+           Elapsed time 3.8276 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.80526e+08
+C lang standart library fgets fputs io for 1024mb txt. Bufsize = 16384
+           Elapsed time 3.52297 sec
+           New file size status: NORMAL
+           Read/Write average speed: 3.04783e+08
+C lang standart library fgets fputs io for 1024mb txt. Bufsize = 32768
+           Elapsed time 4.0285 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.66536e+08
+C lang standart library fgets fputs io for 1024mb txt. Bufsize = 65536
+           Elapsed time 3.51968 sec
+           New file size status: NORMAL
+           Read/Write average speed: 3.05068e+08
+
+
+C lang standart library fscanf fprintf io for 1024mb txt
+           Elapsed time 44.0247 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.43895e+07
+
+
+CPP stl io by rdbuf for 1024mb txt
+           Elapsed time 3.99639 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.68678e+08
+
+
+CPP stl io binary by  rdbuf for 1024mb bin
+           Elapsed time 34.9379 sec
+           New file size status: NORMAL
+           Read/Write average speed: 3.07329e+07
+
+
+CPP stl io by std getline for 1024mb txt
+           Elapsed time 11.4479 sec
+           New file size status: NORMAL
+           Read/Write average speed: 9.37938e+07
+
+
+CPP stl io by ifstream readsome for 1024mb txt. Bufsize = 64
+           Elapsed time 11.9521 sec
+           New file size status: NORMAL
+           Read/Write average speed: 8.98372e+07
+CPP stl io by ifstream readsome for 1024mb txt. Bufsize = 128
+           Elapsed time 4.02307 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.66896e+08
+CPP stl io by ifstream readsome for 1024mb txt. Bufsize = 256
+           Elapsed time 3.60235 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.98067e+08
+CPP stl io by ifstream readsome for 1024mb txt. Bufsize = 512
+           Elapsed time 3.76607 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.85109e+08
+CPP stl io by ifstream readsome for 1024mb txt. Bufsize = 1024
+           Elapsed time 4.57117 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.34894e+08
+CPP stl io by ifstream readsome for 1024mb txt. Bufsize = 4096
+           Elapsed time 3.88755 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.762e+08
+CPP stl io by ifstream readsome for 1024mb txt. Bufsize = 8192
+           Elapsed time 3.5881 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.9925e+08
+CPP stl io by ifstream readsome for 1024mb txt. Bufsize = 16384
+           Elapsed time 3.56631 sec
+           New file size status: NORMAL
+           Read/Write average speed: 3.01079e+08
+CPP stl io by ifstream readsome for 1024mb txt. Bufsize = 32768
+           Elapsed time 3.34249 sec
+           New file size status: NORMAL
+           Read/Write average speed: 3.2124e+08
+CPP stl io by ifstream readsome for 1024mb txt. Bufsize = 65536
+           Elapsed time 3.32877 sec
+           New file size status: NORMAL
+           Read/Write average speed: 3.22564e+08
+
+
+CPP stl io binary by ifstream readsome for 1024mb bin. Bufsize = 64
+           Elapsed time 42.6678 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.51651e+07
+CPP stl io binary by ifstream readsome for 1024mb bin. Bufsize = 128
+           Elapsed time 31.8571 sec
+           New file size status: NORMAL
+           Read/Write average speed: 3.37049e+07
+CPP stl io binary by ifstream readsome for 1024mb bin. Bufsize = 256
+           Elapsed time 3.6937 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.90696e+08
+CPP stl io binary by ifstream readsome for 1024mb bin. Bufsize = 512
+           Elapsed time 3.53749 sec
+           New file size status: NORMAL
+           Read/Write average speed: 3.03532e+08
+CPP stl io binary by ifstream readsome for 1024mb bin. Bufsize = 1024
+           Elapsed time 4.81766 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.22876e+08
+CPP stl io binary by ifstream readsome for 1024mb bin. Bufsize = 4096
+           Elapsed time 3.84223 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.79458e+08
+CPP stl io binary by ifstream readsome for 1024mb bin. Bufsize = 8192
+           Elapsed time 3.73075 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.87808e+08
+CPP stl io binary by ifstream readsome for 1024mb bin. Bufsize = 16384
+           Elapsed time 3.41372 sec
+           New file size status: NORMAL
+           Read/Write average speed: 3.14537e+08
+CPP stl io binary by ifstream readsome for 1024mb bin. Bufsize = 32768
+           Elapsed time 3.2685 sec
+           New file size status: NORMAL
+           Read/Write average speed: 3.28512e+08
+CPP stl io binary by ifstream readsome for 1024mb bin. Bufsize = 65536
+           Elapsed time 3.36892 sec
+           New file size status: NORMAL
+           Read/Write average speed: 3.1872e+08
+
+
+CPP stl io binary by copy streambuf iterator for 1024mb bin
+           Elapsed time 3.84173 sec
+           New file size status: NORMAL
+           Read/Write average speed: 2.79494e+08
+
+
+CPP stl io by ifstream read for 1024mb txt
+           Elapsed time 17.2724 sec
+           New file size status: NORMAL
+           Read/Write average speed: 6.21652e+07
+
+
+CPP stl io by ifstream read for 1024mb bin
+           Elapsed time 30.1935 sec
+           New file size status: NORMAL
+           Read/Write average speed: 3.5562e+07
