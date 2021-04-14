@@ -38,14 +38,22 @@ void time_wraper(Fn foo,std::string path,
     }else{
         std::cout <<" >>>>> >>>>> NOT ENOUGH <<<<< <<<<<\n";
     }
+    remove(path_to_new_file.c_str());
 }
 
 
 int main(int argc, char **argv){
 
+    if(argc != 3){
+        std::cerr << "usage <file_txt> <file_binary>";
+        return 0;
+    }
     std::vector<int> vec_bufsize = {64, 128, 256 , 512, 1024, 4096, 8192,16384, 32768,65536};
-    std::vector<std::string> vec_filename = {"CMakeCache.txt", "video_50mb.mp4"};
-    std::vector<std::string> vec_new_filename = {"new.txt", "new_video.mp4"};
+    std::vector<std::string> vec_filename;
+    for(int i = 1; i < 3; i++){
+        vec_filename.push_back(argv[i]);
+    }
+    std::vector<std::string> vec_new_filename = {"new.txt", "new_binary"};
     //printf("%ld\n",get_file_size((char *)"CMakeCache.txt"));
     std::map<std::string, long long> file_map;
     for(auto i : vec_filename){
@@ -227,16 +235,5 @@ int main(int argc, char **argv){
         time_wraper(omar, file_from, file_to);
     }
 
-
-
-/*
-    CppFileIO::io_by_rdbuf("CMakeCache.txt", "./new5.c");
-    CppFileIO::io_by_std_getline("CMakeCache.txt", "./new6.c");
-    CppFileIO::io_by_ifstream_readsome("CMakeCache.txt", "./new7.c",256);
-    CppFileIO::io_binary_by_copy_streambuf_iterator("CMakeCache.txt",
-                                                 "./new8.c");
-    CppFileIO::io_by_ifstream_read("CMakeCache.txt", "./new9.c");
-    cout <<"omer";
-    */
     return 0;
 }
